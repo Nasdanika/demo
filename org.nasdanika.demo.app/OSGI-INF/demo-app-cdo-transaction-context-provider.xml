@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="false" name="Demo App Transaction Context Provider">
+   <implementation class="org.nasdanika.demo.app.DemoAppCDOTransactionContextProviderComponent"/>
+   <service>
+      <provide interface="org.nasdanika.cdo.CDOTransactionContextProvider"/>
+   </service>
+   <reference bind="setSessionProvider" cardinality="1..1" interface="org.eclipse.emf.cdo.session.CDOSessionProvider" name="CDOSessionProvider" policy="static" unbind="clearSessionProvider"/>
+</scr:component>

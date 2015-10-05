@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?><target name="org.nasdanika.demo.target" sequenceNumber="4">
+<locations>
+<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.nasdanika.server.jetty.feature.feature.group" version="0.1.0.201509280348"/>
+<unit id="org.nasdanika.feature.feature.group" version="0.1.0.201509280348"/>
+<unit id="org.nasdanika.equinox.feature.feature.group" version="0.1.0.201509280348"/>
+<unit id="org.nasdanika.webtest.feature.feature.group" version="0.1.0.201509280348"/>
+<unit id="org.nasdanika.cdo.feature.feature.group" version="0.1.0.201509280348"/>
+<repository location="http://www.nasdanika.org/server/repository"/>
+</location>
+</locations>
+</target>

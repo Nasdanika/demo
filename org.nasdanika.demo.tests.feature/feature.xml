@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.nasdanika.demo.tests.feature"
+      label="Demo App tests feature"
+      version="1.0.0.qualifier">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <includes
+         id="org.nasdanika.demo.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.nasdanika.webtest.feature"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.nasdanika.demo.tests"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"/>
+
+   <plugin
+         id="org.nasdanika.demo.ui.driver.actors"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.nasdanika.demo.ui.driver.pages"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.nasdanika.demo.ui.driver.actors.impl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.nasdanika.demo.ui.driver.pages.impl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+</feature>

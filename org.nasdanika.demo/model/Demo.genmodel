@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.nasdanika.demo/src" modelPluginID="org.nasdanika.demo"
+    modelName="Demo" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
+    reflectiveDelegation="true" importerID="org.eclipse.emf.importer.cdo" featureDelegation="Reflective"
+    complianceLevel="8.0" suppressGenModelAnnotations="false" copyrightFields="false"
+    providerRootExtendsClass="org.eclipse.emf.cdo.edit.CDOItemProviderAdapter" operationReflection="true"
+    importOrganizing="true">
+  <foreignModel>Demo.ecore</foreignModel>
+  <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
+  <genPackages prefix="Demo" basePackage="org.nasdanika" disposableProviderFactory="true"
+      ecorePackage="Demo.ecore#/">
+    <genDataTypes ecoreDataType="Demo.ecore#//Exception"/>
+    <genDataTypes ecoreDataType="Demo.ecore#//HttpServletRequestContext"/>
+    <genClasses ecoreClass="Demo.ecore#//Dealership">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Demo.ecore#//Dealership/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Demo.ecore#//Dealership/address"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Demo.ecore#//Dealership/inventory"/>
+      <genOperations ecoreOperation="Demo.ecore#//Dealership/home">
+        <genParameters ecoreParameter="Demo.ecore#//Dealership/home/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="Demo.ecore#//Dealership/inventoryTable">
+        <genParameters ecoreParameter="Demo.ecore#//Dealership/inventoryTable/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="Demo.ecore#//Car">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Demo.ecore#//Car/make"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Demo.ecore#//Car/year"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Demo.ecore#//Car/vin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Demo.ecore#//Car/mileage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Demo.ecore#//Car/model"/>
+      <genOperations ecoreOperation="Demo.ecore#//Car/home">
+        <genParameters ecoreParameter="Demo.ecore#//Car/home/context"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

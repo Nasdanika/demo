@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="demo" nsURI="urn:org.nasdanika.demo" nsPrefix="org.nasdanika.demo">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="Dealership model package.&#xD;&#xA;&#xD;&#xA;Class diagram: ![Class diagram](bundle:org.nasdanika.demo/doc/class_diagram.png)"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Dealership">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Dealership is the root of the model."/>
+    </eAnnotations>
+    <eOperations name="home" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        eExceptions="#//Exception">
+      <eAnnotations source="org.nasdanika.cdo.web:home-route"/>
+      <eParameters name="context" eType="#//HttpServletRequestContext">
+        <eAnnotations source="org.nasdanika.cdo:context-parameter"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="inventoryTable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        eExceptions="#//Exception">
+      <eAnnotations source="org.nasdanika.cdo.web:route"/>
+      <eParameters name="context" eType="#//HttpServletRequestContext">
+        <eAnnotations source="org.nasdanika.cdo:context-parameter"/>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Dealership name."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="address" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Dealership address."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inventory" upperBound="-1"
+        eType="#//Car" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Dealership sells zero or more cars."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Car">
+    <eOperations name="home" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        eExceptions="#//Exception">
+      <eAnnotations source="org.nasdanika.cdo.web:home-route"/>
+      <eParameters name="context" eType="#//HttpServletRequestContext">
+        <eAnnotations source="org.nasdanika.cdo:context-parameter"/>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="make" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="year" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mileage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="model" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Exception" instanceClassName="java.lang.Exception"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="HttpServletRequestContext" instanceClassName="org.nasdanika.web.HttpServletRequestContext"/>
+</ecore:EPackage>

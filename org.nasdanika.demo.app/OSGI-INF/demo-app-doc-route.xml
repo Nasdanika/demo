@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" immediate="true" name="Demo App Documentation route">
+   <implementation class="org.nasdanika.cdo.web.doc.DocRoute"/>
+   <service>
+      <provide interface="org.nasdanika.web.Route"/>
+   </service>
+   <property name="pattern" type="String" value="doc/.+"/>
+   <property name="doc-route-path" type="String" value="/router/doc"/>
+   <property name="doc-app-path" type="String" value="/router/doc.html"/>
+   
+   		<reference bind="setCdoSessionProvider" cardinality="1..1" interface="org.eclipse.emf.cdo.session.CDOSessionProvider" name="CDOSessionProvider" policy="static"/>
+   
+</scr:component>

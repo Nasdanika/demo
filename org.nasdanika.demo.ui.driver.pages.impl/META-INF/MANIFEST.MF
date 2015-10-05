@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.nasdanika.demo.ui.driver.pages.impl
+Bundle-SymbolicName: org.nasdanika.demo.ui.driver.pages.impl; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: org.eclipse.osgi.services,
+ org.nasdanika.demo.ui.driver.pages;visibility:=reexport
+Service-Component: OSGI-INF/demo-app-page-factory.xml
+Export-Package: org.nasdanika.demo.ui.driver.pages.impl

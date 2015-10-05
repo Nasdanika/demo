@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="Credit Cards">
+   <implementation class="org.nasdanika.cdo.CDOSessionProviderServerComponent"/>
+   <reference 
+   		bind="addRepository" 
+   		cardinality="1..1" 
+   		interface="org.nasdanika.cdo.RepositoryProvider" 
+   		name="RepositoryProvider" 
+   		policy="static" 
+   		target="(component.name=demo-app-repository)" 
+   		unbind="removeRepository"/>
+   <property name=".acceptors" type="String" value="jvm:demo-app"/>
+   <property name=".repositoryName" type="String" value="demo-app"/>
+   <property name=".connector" type="String" value="jvm:demo-app"/>
+   <service>
+      <provide interface="org.eclipse.emf.cdo.session.CDOSessionProvider"/>
+   </service>
+   <property name="alias" type="String" value="demo-app"/>
+   <reference 
+   		bind="addSessionInitializer" 
+   		cardinality="1..1" 
+   		interface="org.nasdanika.cdo.CDOSessionInitializer" 
+   		name="CDOSessionInitializer" 
+   		policy="static" 
+   		target="(component.name=demo-app-session-initializer)" 
+   		unbind="removeSessionInitializer"/>
+   		
+</scr:component>

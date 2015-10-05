@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.nasdanika.demo</groupId>
+	<artifactId>org.nasdanika.demo.aggregator</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>Aggregator</name>
+	<packaging>pom</packaging>
+	<modules>
+	
+		<module>../org.nasdanika.demo.ui.driver.actors</module>
+	
+		<module>../org.nasdanika.demo.ui.driver.pages</module>
+	
+		<module>../org.nasdanika.demo.ui.driver.actors.impl</module>
+	
+		<module>../org.nasdanika.demo.ui.driver.pages.impl</module>
+	
+		<module>../org.nasdanika.demo</module>
+	
+		<module>../org.nasdanika.demo.app</module>
+	
+		<module>../org.nasdanika.demo.tests</module>
+	
+		<module>../org.nasdanika.demo.tests.feature</module>
+	
+		<module>../org.nasdanika.demo.feature</module>
+	
+		<module>../org.nasdanika.demo.repository</module>
+	
+	</modules>
+</project>

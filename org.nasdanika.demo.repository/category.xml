@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.nasdanika.demo.feature_1.0.0.qualifier.jar" id="org.nasdanika.demo.feature" version="1.0.0.qualifier">
+      <category name="org.nasdanika.demo.category"/>
+   </feature>
+   <category-def name="org.nasdanika.demo.category" label="Demo App">
+      <description>
+         org.nasdanika.demo.
+      </description>
+   </category-def>
+</site>

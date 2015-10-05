@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.nasdanika.demo.ui.driver.actors.impl
+Bundle-SymbolicName: org.nasdanika.demo.ui.driver.actors.impl; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: org.nasdanika.demo.ui.driver.actors;visibility:=reexport,
+ org.eclipse.osgi.services
+Service-Component: OSGI-INF/demo-app-actor-factory.xml
+Export-Package: org.nasdanika.demo.ui.driver.actors.impl
