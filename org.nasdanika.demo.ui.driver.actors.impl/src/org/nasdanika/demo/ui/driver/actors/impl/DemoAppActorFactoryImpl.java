@@ -1,9 +1,9 @@
 package org.nasdanika.demo.ui.driver.actors.impl;
 
-import org.nasdanika.demo.ui.driver.pages.DemoAppPageFactory;
-import org.nasdanika.demo.ui.driver.actors.DemoAppActorFactory;
 import org.nasdanika.demo.ui.driver.actors.DemoAppActor;
-import org.nasdanika.webtest.AbstractNasdanikaWebTestRunner;
+import org.nasdanika.demo.ui.driver.actors.DemoAppActorFactory;
+import org.nasdanika.demo.ui.driver.pages.DemoAppPageFactory;
+import org.nasdanika.webtest.WebTestUtil;
 import org.openqa.selenium.WebDriver;
 import org.osgi.service.component.ComponentContext;
 
@@ -12,7 +12,7 @@ public class DemoAppActorFactoryImpl implements DemoAppActorFactory {
 	private DemoAppPageFactory pageFactory;
 
 	public void setPageFactory(DemoAppPageFactory pageFactory) {
-		this.pageFactory = AbstractNasdanikaWebTestRunner.proxyPageFactory(pageFactory);
+		this.pageFactory = WebTestUtil.proxyPageFactory(pageFactory);
 	}
 
 	@Override
